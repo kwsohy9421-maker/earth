@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CleanWave 재단</title>
+  
+  <!-- 구글 폰트 (Noto Sans KR) -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* 전체 스타일 */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Noto Sans KR", sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      color: #003b5c;
+      background-color: #f5f8fa;
+      line-height: 1.6;
+    }
+
+    /* 헤더 */
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+    }
+
+    header h1 {
+      font-size: 1.4rem;
+      color: #0077b6;
+      font-weight: 700;
+    }
+
+    header h1 span {
+      color: #ffd60a;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #003b5c;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffd60a;
+    }
+
+    /* 섹션 공통 */
+    section {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 120px 20px 80px; /* 상단 여백 추가 */
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #0077b6;
+    }
+
+    section p {
+      max-width: 700px;
+      font-size: 1.1rem;
+    }
+
+    /* 배경 */
+    #intro {
+      background: linear-gradient(to bottom right, #caf0f8, #90e0ef);
+    }
+
+    #activities {
+      background: linear-gradient(to bottom right, #ade8f4, #f5f8fa);
+    }
+
+    #campaign {
+      background: linear-gradient(to bottom right, #f5f8fa, #caf0f8);
+    }
+
+    #stories {
+      background: linear-gradient(to bottom right, #e0f7fa, #f5f8fa);
+    }
+
+    #contact {
+      background: linear-gradient(to bottom right, #90e0ef, #ade8f4);
+    }
+
+    /* 버튼 */
+    button {
+      background-color: #ffd60a;
+      border: none;
+      color: #003b5c;
+      padding: 12px 25px;
+      border-radius: 25px;
+      font-size: 1rem;
+      margin-top: 15px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #ffc300;
+    }
+
+    /* 강조 */
+    .highlight {
+      color: #ffd60a;
+      font-weight: 700;
+    }
+
+    /* 푸터 */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #003b5c;
+      color: white;
+      font-size: 0.9rem;
+    }
+
+    /* 반응형 (모바일) */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        padding: 10px 15px;
+      }
+
+      nav {
+        margin-top: 10px;
+      }
+
+      nav a {
+        margin: 0 10px;
+        font-size: 0.95rem;
+      }
+
+      section h2 {
+        font-size: 1.6rem;
+      }
+
+      section p {
+        font-size: 1rem;
+      }
+
+      button {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🌊 <span>Clean</span>Wave</h1>
+    <nav>
+      <a href="#intro">소개</a>
+      <a href="#activities">핵심활동</a>
+      <a href="#campaign">캠페인참여</a>
+      <a href="#stories">뉴스/스토리</a>
+      <a href="#contact">후원/문의</a>
+    </nav>
+  </header>
+
+  <!-- 소개 -->
+  <section id="intro">
+    <h2>깨끗한 바다, <span class="highlight">지속가능한 미래</span></h2>
+    <p>
+      클린웨이브는 해양 플라스틱 문제 해결을 위해 설립된 비영리 재단입니다.<br />
+      작은 파도가 <span class="highlight">큰 변화를</span> 만드는 것처럼, 우리의 행동이 지구를 바꿉니다.
+    </p>
+  </section>
+
+  <!-- 핵심활동 -->
+  <section id="activities">
+    <h2>핵심활동</h2>
+    <p>
+      🐚 해안가 플라스틱 수거 캠페인 <br />
+      🎨 수거된 폐플라스틱으로 환경예술 작품 제작 <br />
+      🏫 학교·청소년 환경교육 프로그램 운영
+    </p>
+  </section>
+
+  <!-- 캠페인참여 -->
+  <section id="campaign">
+    <h2>캠페인 참여</h2>
+    <p>
+      “<span class="highlight">작은 물결이 지구를 바꾼다</span>.”<br />
+      누구나 바다를 지키는 물결이 될 수 있습니다.<br />
+      함께 해변 정화 활동에 참여해보세요!
+    </p>
+    <button aria-label="캠페인 참여 신청" onclick="alert('캠페인 참여 신청이 접수되었습니다!')">참여 신청</button>
+  </section>
+
+  <!-- 뉴스/스토리 -->
+  <section id="stories">
+    <h2>뉴스 & 스토리</h2>
+    <p>
+      🌊 2025.10.10 – 부산 해운대 정화 캠페인 1톤 수거 달성<br />
+      🐠 2025.09.20 – 청소년 환경 예술제 ‘Plastic Reborn’ 개최<br />
+      🐋 2025.08.05 – 전국 바다의 날 기념 해양 보전 포럼 참여
+    </p>
+  </section>
+
+  <!-- 후원/문의 -->
+  <section id="contact">
+    <h2>후원 및 문의</h2>
+    <p>
+      💌 cleanwave@eco.org<br />
+      ☎ 070-1234-5678<br />
+      후원계좌 : 클린웨이브재단 123-456-789 (청년은행)
+    </p>
+    <button aria-label="후원 문의 접수" onclick="alert('감사합니다! 후원 문의가 접수되었습니다.')">후원하기</button>
+  </section>
+
+  <footer>
+    © 2025 CleanWave Foundation | 작은 물결이 지구를 바꿉니다 🌊💛
+  </footer>
+
+  <script>
+    // 스크롤 시 섹션 등장 애니메이션
+    const sections = document.querySelectorAll("section");
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    }, { threshold: 0.3 });
+
+    sections.forEach(section => observer.observe(section));
+  </script>
+</body>
+</html>
